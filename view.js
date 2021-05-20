@@ -32,7 +32,7 @@ function getTable(list){
 
 function firstInput(inp){
     const {input} = inp
-    const message = "Left temperature is source(s/n)? " 
+    const message = "Left temperature is source(y/n)? " 
     return inquirer.prompt([
         {
             name: "input1",
@@ -40,7 +40,7 @@ function firstInput(inp){
             message: message,
             default: input,
             validate: function(val){
-                if(val === "n" || val === "s" || val === "S" || val === "N"){
+                if(val === "n" || val === "y" || val === "Y" || val === "N"){
                     return true
                 } else {
                     return "Please enter a valid option (s/n)"
